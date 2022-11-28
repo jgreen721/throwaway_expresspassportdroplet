@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>~ Login App ~</title>
+  </head>
+  <body>
+    <div class="login-app">
+      <header>
+        <h1 class="login-h1">EJS STORE <span class="red">LOGIN</span></h1>
+        <small class="muted"
+          >Sign in to <em>your</em> auth session and buy, buy, buy!</small
+        >
+      </header>
+
+      <div class="login-body">
+        <% if(messages.error){ %>
+        <h3 class="red"><%=messages.error%></h3>
+        <% } %>
+        <div class="login-card">
+          <form action="/login" method="POST">
+            <div class="form-div">
+              <input
+                type="text"
+                name="username"
+                class="form-input"
+                id="username"
+                placeholder="Username..."
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-div">
+              <input
+                type="text"
+                name="password"
+                class="form-input"
+                id="password"
+                placeholder="Password..."
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-div">
+              <button class="login-btn" type="submit">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <footer>
+        <strong>Footer&copy;</strong>
+      </footer>
+    </div>
+  </body>
+</html>
